@@ -73,6 +73,15 @@ export default function Home() {
 
   const handleStepClick = (stepNumber: string) => {
     setActiveStep(stepNumber);
+    
+    // Scroll to the details section
+    const detailsElement = document.getElementById('stepDetails');
+    if (detailsElement) {
+      detailsElement.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'center' 
+      });
+    }
   };
 
   return (
