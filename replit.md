@@ -4,6 +4,10 @@ This is a React-based technical blog application that explains the Linux boot pr
 
 The project focuses on educational content delivery, featuring interactive elements and modern UI components to make technical concepts accessible to readers. It serves as a comprehensive guide covering BIOS/UEFI firmware, POST, GRUB bootloader, kernel initialization, systemd, and desktop environment startup.
 
+## Recent Updates
+
+- **GitHub Pages Deployment Ready** (August 2025): Project is now configured for automatic deployment to GitHub Pages using GitHub Actions. The build process has been optimized for static hosting with relative paths and a dedicated Vite configuration file.
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.
@@ -46,3 +50,11 @@ Preferred communication style: Simple, everyday language.
 - **Icons**: Lucide React for consistent iconography throughout the application
 
 The architecture emphasizes educational content delivery with modern web technologies, ensuring fast loading, responsive design, and maintainable codebase for technical documentation and interactive learning experiences.
+
+## Deployment Configuration
+
+### GitHub Pages Setup
+- **Build Configuration**: Custom Vite config (`vite.config.github-pages.ts`) optimized for static hosting
+- **Deployment Pipeline**: GitHub Actions workflow (`.github/workflows/deploy.yml`) for automatic deployment
+- **Build Process**: Static site generation using `vite build` with relative paths for GitHub Pages compatibility
+- **Documentation**: Comprehensive deployment guide and README for easy setup
