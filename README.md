@@ -65,6 +65,25 @@ npm run dev
 npm run build
 ```
 
+## GitHub Pages Deployment
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+### Setup Instructions:
+
+1. **Push to GitHub**: Upload your repository to GitHub
+2. **Enable GitHub Pages**:
+   - Go to your repository settings
+   - Navigate to "Pages" in the left sidebar
+   - Under "Source", select "GitHub Actions"
+3. **Automatic Deployment**: The site will automatically build and deploy when you push to the main branch
+
+### Manual Build:
+The static files are generated in `dist/public/` and can be deployed to any static hosting service.
+
+**Live Demo**: Once deployed, your site will be available at:
+`https://yourusername.github.io/repository-name`
+
 ## Project Structure
 
 ```
