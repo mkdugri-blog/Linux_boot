@@ -125,7 +125,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 gradient-text">
-              From Power Button to Penguin
+              From Power Button to Penguin 🐧
             </h1>
             <p className="text-xl md:text-2xl text-text-secondary mb-8 leading-relaxed">
               The Linux Boot Journey Explained
