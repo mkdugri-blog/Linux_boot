@@ -210,6 +210,11 @@ export default function Home() {
               </div>
             </div>
             
+            {/* Arrow connecting GRUB to Kernel */}
+            <div className="flex justify-center my-6">
+              <i className="fas fa-arrow-down text-text-muted text-2xl md:hidden" />
+            </div>
+            
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6 mt-8 flowchart-mobile">
               {/* Step 5: Kernel */}
               <div 
