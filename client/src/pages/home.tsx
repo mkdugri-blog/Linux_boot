@@ -125,7 +125,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 gradient-text">
-              From Power Button to Penguin 🐧
+              From Power Button to Penguin
             </h1>
             <p className="text-xl md:text-2xl text-text-secondary mb-8 leading-relaxed">
               The Linux Boot Journey Explained
@@ -500,12 +500,118 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Quick Recap Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-text-primary">🔄 Quick Recap: Linux Boot Sequence</h2>
+              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border">
+                <pre className="code-block rounded-lg p-6 font-mono text-sm overflow-x-auto">
+<span className="text-accent-green">Power Button</span> 
+   <span className="text-text-muted">↓</span>
+<span className="text-accent-blue">Firmware (BIOS/UEFI)</span> 
+   <span className="text-text-muted">↓</span>
+<span className="text-accent-purple">POST (hardware check)</span> 
+   <span className="text-text-muted">↓</span>
+<span className="text-accent-green">Boot Loader (GRUB2)</span> 
+   <span className="text-text-muted">↓</span>
+<span className="text-accent-blue">Linux Kernel loads</span> 
+   <span className="text-text-muted">↓</span>
+<span className="text-accent-purple">Init system (systemd)</span> 
+   <span className="text-text-muted">↓</span>
+<span className="text-accent-green">Login manager & Desktop</span>
+                </pre>
+              </div>
+            </div>
 
+            {/* Why This Matters Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-text-primary">✨ Why This Matters</h2>
+              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border">
+                <p className="text-text-secondary mb-6">
+                  Understanding the Linux boot process isn't just geek trivia. It's practical:
+                </p>
+                
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4">
+                    <h4 className="font-semibold text-red-400 mb-2">GRUB errors?</h4>
+                    <p className="text-text-secondary text-sm">→ Boot loader stage failed</p>
+                  </div>
+                  
+                  <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4">
+                    <h4 className="font-semibold text-yellow-400 mb-2">Kernel panic?</h4>
+                    <p className="text-text-secondary text-sm">→ Kernel didn't initialize properly</p>
+                  </div>
+                  
+                  <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
+                    <h4 className="font-semibold text-blue-400 mb-2">Services won't start?</h4>
+                    <p className="text-text-secondary text-sm">→ Likely a systemd issue</p>
+                  </div>
+                </div>
+                
+                <p className="text-text-muted mt-6">
+                  With this knowledge, you can troubleshoot confidently when Linux doesn't boot as expected.
+                </p>
+              </div>
+            </div>
           </article>
         </div>
       </section>
 
-
+      {/* Conclusion Section */}
+      <section id="conclusion" className="py-16 bg-dark-secondary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">🎯 Conclusion</h2>
+            <p className="text-xl text-text-secondary mb-8 leading-relaxed">
+              Next time you hit that power button, remember: you're not just starting a machine, you're watching an elegant 
+              chain of software handovers — from BIOS/UEFI to GRUB, kernel, systemd, and finally your desktop.
+            </p>
+            <p className="text-lg text-accent-blue font-medium mb-12">
+              It's a <strong>symphony of silicon and software</strong> — and Linux makes sure the music plays just right. 🐧
+            </p>
+            
+            {/* Call to Action */}
+            <div className="gradient-border">
+              <div className="gradient-border-inner p-8">
+                <h3 className="text-2xl font-semibold mb-4">Want to Learn More?</h3>
+                <p className="text-text-secondary mb-6">
+                  Explore advanced topics like custom kernel compilation, systemd service creation, and boot optimization techniques.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="https://github.com" 
+                    className="inline-flex items-center px-6 py-3 bg-accent-blue hover:bg-blue-600 rounded-lg font-medium transition-colors"
+                    data-testid="link-github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fab fa-github mr-2" />
+                    View on GitHub
+                  </a>
+                  <button 
+                    className="inline-flex items-center px-6 py-3 bg-dark-tertiary hover:bg-gray-700 border border-dark-border rounded-lg font-medium transition-colors"
+                    data-testid="button-share"
+                    onClick={() => {
+                      if (navigator.share) {
+                        navigator.share({
+                          title: 'Linux Boot Process Explained',
+                          text: 'Learn about the Linux boot process from power button to desktop',
+                          url: window.location.href
+                        });
+                      } else {
+                        navigator.clipboard.writeText(window.location.href);
+                        alert('URL copied to clipboard!');
+                      }
+                    }}
+                  >
+                    <i className="fas fa-share mr-2" />
+                    Share Article
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="py-12 border-t border-dark-border">
@@ -514,7 +620,6 @@ export default function Home() {
             <div className="flex items-center justify-center space-x-2 mb-4">
               <i className="fab fa-linux text-accent-green text-2xl" />
               <span className="text-xl font-semibold">Linux Boot Process</span>
-              <span className="text-2xl">🐧</span>
             </div>
             <p className="text-text-secondary mb-6">
               A comprehensive guide to understanding how Linux systems start up
