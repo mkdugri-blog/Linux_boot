@@ -514,6 +514,7 @@ export default function Home() {
             <div className="flex items-center justify-center space-x-2 mb-4">
               <i className="fab fa-linux text-accent-green text-2xl" />
               <span className="text-xl font-semibold">Linux Boot Process</span>
+              <span className="text-2xl">🐧</span>
             </div>
             <p className="text-text-secondary mb-6">
               A comprehensive guide to understanding how Linux systems start up
