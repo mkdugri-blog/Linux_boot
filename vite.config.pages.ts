@@ -21,6 +21,14 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           ui: ['@radix-ui/react-toast', '@radix-ui/react-tooltip'],
         },
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(css|js)$/.test(assetInfo.name)) {
+            return `assets/[name]-[hash].${ext}`;
+          }
+          return `assets/[name]-[hash].${ext}`;
+        },
       },
     },
   },
