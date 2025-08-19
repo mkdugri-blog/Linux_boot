@@ -24,5 +24,5 @@ export default defineConfig({
       },
     },
   },
-  base: "/GitBlogFlow/",
+  base: "/Linux_boot/",
 });
