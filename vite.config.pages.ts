@@ -15,6 +15,14 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-toast', '@radix-ui/react-tooltip'],
+        },
+      },
+    },
   },
-  base: "/GitBlog/",
+  base: "/GitBlogFlow/",
 });

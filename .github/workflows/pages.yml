@@ -24,7 +24,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci
-      - run: npx vite build --config vite.config.pages.ts
+      - run: npm run build:static
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
