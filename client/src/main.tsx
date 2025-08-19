@@ -3,11 +3,9 @@ import { Router } from "wouter";
 import App from "./App";
 import "./index.css";
 
-// Configure router for GitHub Pages
-const basePath = "/Linux_boot";
-
+// Simple routing for GitHub Pages
 createRoot(document.getElementById("root")!).render(
-  <Router base={basePath}>
+  <Router>
     <App />
   </Router>
 );
