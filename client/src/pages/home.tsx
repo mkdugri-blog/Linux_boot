@@ -517,6 +517,63 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Conclusion Section */}
+      <section id="conclusion" className="py-16 bg-dark-secondary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">🎯 Conclusion</h2>
+            <p className="text-xl text-text-secondary mb-8 leading-relaxed">
+              Next time you hit that power button, remember: you're not just starting a machine, you're watching an elegant 
+              chain of software handovers — from BIOS/UEFI to GRUB, kernel, systemd, and finally your desktop.
+            </p>
+            <p className="text-lg text-accent-blue font-medium mb-12">
+              It's a <strong>symphony of silicon and software</strong> — and Linux makes sure the music plays just right. 🐧
+            </p>
+            
+            {/* Call to Action */}
+            <div className="gradient-border">
+              <div className="gradient-border-inner p-8">
+                <h3 className="text-2xl font-semibold mb-4">Want to Learn More?</h3>
+                <p className="text-text-secondary mb-6">
+                  Explore advanced topics like custom kernel compilation, systemd service creation, and boot optimization techniques.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="https://github.com/Mk-dugri" 
+                    className="inline-flex items-center px-6 py-3 bg-accent-blue hover:bg-blue-600 rounded-lg font-medium transition-colors"
+                    data-testid="link-github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fab fa-github mr-2" />
+                    View on GitHub
+                  </a>
+                  <button 
+                    className="inline-flex items-center px-6 py-3 bg-dark-tertiary hover:bg-gray-700 border border-dark-border rounded-lg font-medium transition-colors"
+                    data-testid="button-share"
+                    onClick={() => {
+                      if (navigator.share) {
+                        navigator.share({
+                          title: 'Linux Boot Process Explained',
+                          text: 'Learn about the Linux boot process from power button to desktop',
+                          url: window.location.href
+                        });
+                      } else {
+                        navigator.clipboard.writeText(window.location.href);
+                        alert('URL copied to clipboard!');
+                      }
+                    }}
+                  >
+                    <i className="fas fa-share mr-2" />
+                    Share Article
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-12 border-t border-dark-border">
         <div className="container mx-auto px-4">
@@ -529,13 +586,10 @@ export default function Home() {
               A comprehensive guide to understanding how Linux systems start up
             </p>
             <div className="flex justify-center space-x-6">
-              <a href="https://github.com" className="text-text-muted hover:text-accent-blue transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Mk-dugri" className="text-text-muted hover:text-accent-blue transition-colors" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github text-xl" />
               </a>
-              <a href="https://twitter.com" className="text-text-muted hover:text-accent-blue transition-colors" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter text-xl" />
-              </a>
-              <a href="https://linkedin.com" className="text-text-muted hover:text-accent-blue transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/monu9855/" className="text-text-muted hover:text-accent-blue transition-colors" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin text-xl" />
               </a>
             </div>
