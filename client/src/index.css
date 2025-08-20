@@ -111,6 +111,28 @@
     word-spacing: 0.03em;
   }
   
+  /* Fix specific spacing issues */
+  .text-content li strong {
+    margin: 0 0.1em;
+    padding: 0 0.05em;
+  }
+  
+  .text-content li:contains("decompresses") {
+    word-spacing: 0.08em;
+  }
+  
+  .text-content li:contains("appropriate") {
+    word-spacing: 0.06em;
+  }
+  
+  .text-content li:contains("filesystem") {
+    word-spacing: 0.06em;
+  }
+  
+  .text-content li:contains("manager") {
+    word-spacing: 0.06em;
+  }
+  
   .flowchart-step {
     transition: all 0.3s ease;
     cursor: pointer;

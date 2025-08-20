@@ -457,7 +457,7 @@ export default function Home() {
                 <span className="bg-accent-green text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-4">6</span>
                 Systemd: The Parent of Processes
               </h2>
-              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border">
+              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border text-content">
                 <p className="text-text-secondary mb-6">
                   The kernel's first userspace task is to start <strong>init</strong>, which in modern Linux distributions is almost always <strong className="text-accent-green">systemd</strong>.
                 </p>
@@ -492,7 +492,7 @@ export default function Home() {
                 <span className="bg-accent-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-4">7</span>
                 User Space: Welcome to Linux
               </h2>
-              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border">
+              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border text-content">
                 <p className="text-text-secondary mb-6">Finally, systemd hands you the keys:</p>
                 <ul className="space-y-3 text-text-secondary mb-6">
                   <li className="flex items-center">
