@@ -302,7 +302,7 @@ export default function Home() {
                 <span className="bg-accent-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-4">1</span>
                 Firmware Awakens: BIOS vs UEFI
               </h2>
-              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border">
+              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border text-content">
                 <p className="text-text-secondary mb-6">
                   The instant you press the power button, your CPU doesn't jump straight into Linux. First, it runs 
                   <strong className="text-accent-blue"> firmware</strong> stored on your motherboard — historically 
@@ -338,10 +338,10 @@ export default function Home() {
             {/* POST Section */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-6 text-text-primary flex items-center">
-                <span className="bg-accent-purple text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-4">2</span>
-                POST: Checking the Hardware
+                <span className="bg-accent-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-4">2</span>
+                POST (Power-On Self-Test): Hardware Check
               </h2>
-              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border">
+              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border text-content">
                 <p className="text-text-secondary mb-6">
                   Next comes <strong className="text-accent-purple">POST (Power-On Self-Test)</strong> — a quick diagnostic sweep.
                 </p>
@@ -367,7 +367,7 @@ export default function Home() {
                 <span className="bg-accent-green text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-4">3</span>
                 The Boot Loader: Choosing Who Leads
               </h2>
-              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border">
+              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border text-content">
                 <p className="text-text-secondary mb-6">
                   Now, firmware must find and load the <strong className="text-accent-green">boot loader</strong>, 
                   the small program responsible for starting your OS.
@@ -405,7 +405,7 @@ export default function Home() {
                 <span className="bg-accent-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-4">4</span>
                 Loading the Kernel
               </h2>
-              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border">
+              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border text-content">
                 <p className="text-text-secondary mb-6">Once GRUB has its orders, it:</p>
                 <ol className="space-y-3 text-text-secondary mb-6 list-decimal list-inside">
                   <li>Locates the <strong>Linux kernel</strong> (e.g., <code>/boot/vmlinuz-...</code>)</li>
@@ -425,7 +425,7 @@ export default function Home() {
                 <span className="bg-accent-purple text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-4">5</span>
                 Kernel Initialization: Linux Takes Charge
               </h2>
-              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border">
+              <div className="bg-dark-secondary rounded-xl p-8 border border-dark-border text-content">
                 <p className="text-text-secondary mb-6">The <strong className="text-accent-purple">Linux kernel</strong> now assumes command.</p>
                 <ul className="space-y-3 text-text-secondary mb-6">
                   <li className="flex items-center">

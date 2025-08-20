@@ -96,6 +96,21 @@
     width: 100%;
   }
   
+  /* Improve text spacing and readability */
+  .text-content li {
+    line-height: 1.6;
+    word-spacing: 0.05em;
+  }
+  
+  .text-content strong {
+    letter-spacing: 0.02em;
+  }
+  
+  .text-content p {
+    line-height: 1.7;
+    word-spacing: 0.03em;
+  }
+  
   .flowchart-step {
     transition: all 0.3s ease;
     cursor: pointer;
