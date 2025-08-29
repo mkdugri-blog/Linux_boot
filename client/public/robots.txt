@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mkdugri-blog.github.io/Linux_boot/sitemap.xml
